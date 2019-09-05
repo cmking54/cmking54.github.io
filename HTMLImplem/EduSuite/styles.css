@@ -20,8 +20,9 @@ nav {
   float: top;
   /*width: 30%;*/
   /*height: 300px;*/ /* only for demonstration, should be removed */
-  background: #ccc;
+  background: #e09327;
   padding: 20px;
+
 }
 
 nav table {
@@ -30,14 +31,15 @@ nav table {
 nav th {
   padding: 0px 90px;
   border-color: #e09327;
-
+  color: #ccdda4;
 }
 
 article {
   float: left;
   padding: 20px;
   width: 70%;
-  background-color: #f1f1f1;
+  color: #e09327; /*text color*/
+  background-color: #ccdda4; /* background 1 */
 }
 
 leftAside {
@@ -56,18 +58,17 @@ rightAside {
     padding: 20px;
 }
 section {
-
+  background-color: #ccdda4; /* background 1 */
 }
 /* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 
 /* Style the footer */
 footer {
-  background-color: #777;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #e09327; /*text color*/
   padding: 10px;
   color: white;
 }
@@ -78,4 +79,18 @@ footer {
     width: 100%;
     height: auto;
   }
+}
+
+.trial {
+  color: #e09327; /*text color*/
+  background-color: #ccdda4; /* background 1 */
+}
+
+.speaker {
+  float:right;
+  background-color: #e09327; /*text color*/
+  color: #ccdda4; /* background 1 */
+  width: 30%;
+  height 700px;
+  padding-bottom: 100px;
 }
