@@ -1,0 +1,38 @@
+ /*  this is a class */
+.listOfTopics{
+  background: gray;
+  color: white;
+}
+ /*  this is an id */
+
+#unorderedListID{
+  background-color: #4381e6;  
+  color:black;
+  text-shadow:
+
+}
+#bigForm{
+  width: 500px;
+  border: 1px solid black;
+}
+
+#formsID{
+  background-color: #4381e6;
+  color:black;
+  float: left;
+  border: 1px;
+}
+#seconForm{
+  background-color: #4381e6;
+  color:black;
+  float: left;
+
+
+}
+#thirdForm{
+  background-color: #4381e6;
+  color:black;
+  float: left;
+  border: 1px;
+
+}
