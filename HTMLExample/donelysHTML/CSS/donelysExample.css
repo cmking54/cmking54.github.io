@@ -88,6 +88,7 @@
   width: 650px;
   height: 500px;
   background-color: #8dbf75;
+  border-radius: 15px;
 }
 .page {
   width: 900px;
@@ -129,7 +130,8 @@ to change the color of the whole background ***/
   width: 31%;
   margin: 20px 1.15%;
   height: 160px;
-  background-color: #B2D6FF;    /* Medium blue */
+  background-color: #B2D6FF;
+  border-radius: 15px;    /* Medium blue */
 }
 /*** adding another overflow to tell the footer to ignore the flow ***/
 .footer {
@@ -142,16 +144,21 @@ to change the color of the whole background ***/
 
 .content{
   padding: 20px;
+
 }
+/*** editing information paragraph **/
 p {
   margin-bottom: 20px;
+  border-radius: 15px;
 }
 
 .menu {
   padding: 20px;
 
+
 }
 .searchForm{
   margin-bottom:25px;
+  border-radius: 15px;
 
 }
