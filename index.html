@@ -1,75 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <title>JUMP Project</title>
-    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css">
-</head>
+    <title></title>
+  </head>
+  <body>
+    <h1>Graduated</h1>
+    <h2>You focus on the end goal, we can manage the in-between</h2>
+    <div style="text-align:center;border-style:solid;">
+      <h3>Starting your Graduated Page</h3>
+      <form id="homepage_schema">
+        <fieldset>
+          <legend>Your Institute Name</legend>
+          <input type="text" name="school_name" placeholder="Colgate"
+          onchange="changeTitle(this)">
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Your Institute's Colors</legend>
+          <input type="text" name="school_color_1" placeholder="Maroon">
+          <input type="text" name="school_color_2" placeholder="White">
+          <br>
+          <input class="jscolor {onFineChange:'change_primary_color(this)'}"
+            name="school_color_custom_1"
+            value="#800000">
+          <input class="jscolor" name="school_color_custom_2">
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Your Institute's Logo</legend>
+          <input type="file" name="school_logo" accept="image/jpeg, image/png">
+        </fieldset>
 
-<body>
-    <center><h1>WELCOME TO OUR HTML Showcase</h1></center>
-        <nav>
-            <a class="active" href="#home">Home</a>
-            <a href="HTMLExample/Chris/Chris.html">Christopher King</a>
-            <a href="HTMLExample/Sai/Sai.html">Sai Allala</a>
-            <a href="HTMLExample/donelysHTML/donelysExample.html">Donelys Familia</a>
-            <a href="HTMLExample/abe/html/abe.html">Abe Pierrot</a>
-        </nav>
-    <section>
-        <frame>
-            <iframe src="HTMLExample/Chris/Chris.html" height="400px" width="100%" style="border:5px solid black;" id="iframe_Chris"></iframe>
-        </frame>
-        <frame>
-            <iframe src="HTMLExample/Sai/Sai.html" height="400px" width="100%" style="border:5px solid black;" name="iframe_Sai"></iframe>
-        </frame>
-        <frame>
-            <iframe src="HTMLExample/donelysHTML/donelysExample.html" height="400px" width="100%" style="border:5px solid black;" name="iframe_Donelys"></iframe>
-        </frame>
-        <frame>
-            <iframe src="HTMLExample/abe/html/abe.html" height="400px" width="100%" style="border:5px solid black;" name="iframe_Abe"></iframe>
-        </frame>
-    </section>
-    <h1><i>
-            <center>
-                <blockquote>“All parts should go together without forcing.
-                    You must remember that the parts you are reassembling were disassembled by you.
-                    Therefore, if you can’t get them together again, there must be a reason.
-                    By all means, do not use a hammer.”</blockquote>
-            </center>
-        </i></h1>
-
-    <h2>What do we do you ask?</h2>
-<h3><a href="HTMLImplem/EduSuite/index.html" target="#iframe_Chris">Christopher King</a></h3>
-    <p style = "font-family:georgia, garamond, serif;font-size:18pxChristopher King;font-style:italic;">
-      I have had to give talks in front of people, we all have! But I always that
-      the interaction for questioning was awkward and stale, so I wanted to update
-      that interaction in the current age of tech. Thus, EduSuite (working title)
-    </p>
-    <a href="HTMLImplem/EduSuite/index.html">Please Visit!</a>
-<h3><a href="HTMLImplem/Professional Site/home.html" target="#iframe_Sai">Sai Allala</a></h3>
-<p style = "font-family:georgia, garamond, serif;font-size:18px;font-style:italic;"> The planet is approaching a tipping point. It is in maturing that we are re-energized. Eons from now, we travellers will heal like never before as we are guided by the planet.
-We are in the midst of an enlightened invocation of curiosity that will clear a path toward the solar system itself. Humankind has nothing to lose. Reality has always been bursting with messengers whose chakras are engulfed in wellbeing.
-It can be difficult to know where to begin. Have you found your path? If you have never experienced this wellspring at the speed of light, it can be difficult to believe.</p>
-<a href="HTMLImplem/Professional Site/home.html">Please Visit!</a>
-<h3><a href="HTMLExample/donelysHTML/projectDonelys.html" target="#iframe_Donelys">Donelys Familia</a></h3>
-<p style = "font-family:georgia, garamond, serif;font-size:18px;font-style:italic;">
-  My site is like a library for medical herbs, it allow you to search and find medicinal herbs  and just in case if you dont know the name of the herbs or plant,  you can click on the image and it will display its info
-</p>
-<a href="HTMLExample/donelysHTML/projectDonelys.html">Please Visit!</a>
-<h3><a href="HTMLImplem/music fanatica/index.html" target="#iframe_Abe">Abe Pierrot</a></h3>
-<p style = "font-family:georgia, garamond, serif;font-size:18px;font-style:italic;">
-  Music Fanatica is built for music fanatics allowing them to discover new music. The application show music video and embedded links to spotify and later to other streaming services. The embedded links to the streaming service will allow user to go to their streaming services and add the newly discovered music to a library.
-</p>
-<a href="HTMLImplem/music fanatica/index.html">Please Visit!</a>
-</body>
-<hr />
-<center><p style="font-size: 12px;">
-    WEBSITE_NAME is optimized for learning, testing, and training. Examples might be simplified to
-    improve reading and basic understanding. Split into references and actual projects created by each of the
-    members. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 2019-present by
-    the Squad. All Rights Reserved. Powered by Collabera.
-</p></center>
-    <center><p style="font-size: 12px;">Breifly Stay America - Pisdogaway</p></center>
-    <center><p style="font-size: 12px;">420 S Dolphinville Rd, Pisdogaway, NJ 08858</p></center>
+        <br><br>
+        <input type="button" value="Generate Home Page"
+        onclick="save_school_page()">
+      </form>
+    </div>
+  </body>
+  <script src="js/jscolor.js"></script>
+  <script src=js/homepage_form.js></script>
+  <style id="style_primary"></style>
 </html>
