@@ -27,7 +27,7 @@ function generateColorScheme() {
     schemes[0].push("#5C88C7");
     schemes[0].push("#0465B2");
   }
-  schemes = (schemes.length == 0)
+  schemes = (schemes.length == 0) ?
               {0: ["#AEC7DC", "#5C88C7", "#0465B2"],
               1: ["#7C6BAF", "#B8B0D7", "#583091"],
               2: ["#FC801C", "#F5A870", "#FED9C6"]}
