@@ -2,6 +2,7 @@
 var changes = {};
 function save_school_page() {
   console.log(document.cookie);
+  console.log(changes);
   for (var change in Object.entries(changes)) {
     makeCookie(change, 1/360);
   }
