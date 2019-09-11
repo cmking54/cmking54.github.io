@@ -3,8 +3,8 @@ var changes = {};
 function save_school_page() {
   console.log(document.cookie);
   console.log(changes);
-  for (var change in Object.entries(changes)) {
-    makeCookie(change, 1/360);
+  for (var change in changes) {
+    makeCookie(change, changes[change], 1/360);
   }
   console.log(document.cookie);
 
@@ -22,11 +22,12 @@ function changeTitle(choice) {
 function checkChanged(prop) {
   if (!changed.hasOwnProperty(prop)) changed[prop] = true;
 }
-function makeCookie(key_value, hours_till_expire) {
+function makeCookie(key, value, hours_till_expire) {
   var date = new Date();
   date.setTime(date.getTime() + (hours_till_expire*60*60*1000));
   var expires = "expires=" + date.toGMTString();
-  document.cookie = key_value[0] + "=" + key_value[1] + ";" + expires + ";path=/;";
+  console.log(key, value);
+  document.cookie = key + "=" + value + ";" + expires + ";path=/;";
   // initial setup
 }
 
