@@ -12,6 +12,7 @@ function getCookie(name) {
   var crumbs = decodedCookie.split(';');
   console.log(crumbs);
   for(var crumb in crumbs) {
+    console.log(crumb);
     var result = crumb.match(name_pattern);
     console.log(result);
     if (result != null) {
