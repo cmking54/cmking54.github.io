@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EduSuite</title>
+  </head>
+  <body>
+    <div id="input"
+    style="width:500px;height:500px;border-style:solid"
+    onmousedown="drag(event)"
+    onmouseup="drop(event)"
+    onmousemove="while_moving(event)">
+
+    </div>
+    <canvas id="drawSpace" width="500" height="500">Canvas Not Available</canvas>
+  </body>
+  <script type="text/javascript">
+    var box = {};
+    var drawing = false;
+    function drag(ev) {
+      console.log(ev);
+      box['startX'] = ev.clientY;
+      box['startY'] = 500 - ev.clientX;
+      //allowDrop();
+      drawing = true;
+      draw();
+    }
+    function while_moving(event) {
+      if (drawing) {
+        box['width'] = box['startX'] - ev.clientX;
+        box['height'] = box['startY'] - ev.clientY;
+        //allowDrop();
+        draw();
+      }
+    }
+    function drop(ev) {
+      box['width'] = box['startX'] - ev.clientX;
+      box['height'] = box['startY'] - ev.clientY;
+      //allowDrop();
+      drawing = false;
+      draw();
+    }
+    function draw() {
+      var canvas = document.getElementById("drawSpace");
+      var context = canvas.getContext('2d');
+      context.clearRect(0,0,canvas.width,canvas.height);
+      context.beginPath();
+      //context.rect(10, 10, 100, 100);
+      context.rect(box['startX'], box['startY'], box['width'], box['height']);
+      context.stroke();
+    }
+    draw();
+  </script>
+</html>
