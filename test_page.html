@@ -11,6 +11,7 @@
     window.onload = function() {
       console.log("Test");
       var primary_color = getCookie('primary_color');
+      console.log(primary_color);
       if (primary_color) { // "" is falsey; semantically is primary color is present
         document.body.style.backgroundColor = primary_color;
       }
