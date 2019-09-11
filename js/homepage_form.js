@@ -4,7 +4,7 @@ function save_school_page() {
   console.log(document.cookie);
   console.log(changes);
   for (var change in changes) {
-    makeCookie(change, changes[change], 1/360);
+    makeCookie(change, changes[change], 1/60);
   }
   console.log(document.cookie);
 

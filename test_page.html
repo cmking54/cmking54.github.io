@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    //window.onload
+    document.body.onload = loader;
+    function loader() {
+      //readFromCookie('primary_color');
+
+      // less modular below
+      var primary_color = getCookie('primary_color');
+      if (primary_color != "") {
+        document.body.style.backgroundColor = primary_color;
+      }
+    }
+    function readFromCookie(key, target) {
+      var value = getCookie(key);
+      if (value != "") {
+        target = value;
+      }
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+  </script>
+</html>
