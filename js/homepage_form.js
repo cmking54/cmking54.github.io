@@ -4,7 +4,7 @@ function save_school_page() {
   console.log(document.cookie);
   console.log(changes);
   for (var change in changes) {
-    makeCookie(change, changes[change], 1/60);
+    makeCookie(change, changes[change]);
   }
   console.log(document.cookie);
 
@@ -22,7 +22,7 @@ function changeTitle(choice) {
 function checkChanged(prop) {
   if (!changed.hasOwnProperty(prop)) changed[prop] = true;
 }
-function makeCookie(key, value, hours_till_expire) {
+function makeCookie(key, value, hours_till_expire=1) {
   var date = new Date();
   date.setTime(date.getTime() + (hours_till_expire*60*60*1000));
   var expires = "expires=" + date.toGMTString();
