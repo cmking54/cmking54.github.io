@@ -10,8 +10,10 @@ function getCookie(name) {
   var decodedCookie = decodeURIComponent(document.cookie); // why needed?
   //console.log("Decoded: " + decodedCookie);
   var crumbs = decodedCookie.split(';');
+  console.log(crumbs);
   for(var crumb in crumbs) {
     var result = crumb.match(name_pattern);
+    console.log(result);
     if (result != null) {
       return result[0];
     }
