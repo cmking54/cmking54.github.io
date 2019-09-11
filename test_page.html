@@ -10,19 +10,19 @@
   <script type="text/javascript">
     window.onload = loader;
     function loader() {
-      readFromCookie('primary_color');
+      readFromCookie('primary_color', document.body.style.backgroundColor);
 
       // less modular below
-      <!-- var primary_color = getCookie('primary_color');
-      if (primary_color != "") {
-        document.body.style.backgroundColor = primary_color;
-      }
+      //var primary_color = getCookie('primary_color');
+      //if (primary_color != "") {
+      //  document.body.style.backgroundColor = primary_color;
+      //}
     }
     function readFromCookie(key, target) {
       var value = getCookie(key);
       if (value != "") {
         target = value;
-      } -->
+      }
     }
 
     function getCookie(cname) {
