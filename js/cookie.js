@@ -6,7 +6,7 @@ function makeCookie(key, value, hours_till_expire=1) {
 }
 
 function getCookie(name) {
-  var name_pattern = RegExp.new(name + "=(.*)");
+  var name_pattern = new RegExp(name + "=(.*)");
   var decodedCookie = decodeURIComponent(document.cookie); // why needed?
   //console.log("Decoded: " + decodedCookie);
   var crumbs = decodedCookie.split(';');

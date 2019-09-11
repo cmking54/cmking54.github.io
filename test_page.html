@@ -5,12 +5,13 @@
     <title></title>
   </head>
   <body>
-
+    <h2></h2>
   </body>
   <script type="text/javascript">
     window.onload = loader;
     function loader() {
       readFromCookie('primary_color', document.body.style.backgroundColor);
+      readFromCookie('title', document.getElementsByTagName('h2')[0].innerText);
     }
     function readFromCookie(key, target) {
       var value = getCookie(key);
