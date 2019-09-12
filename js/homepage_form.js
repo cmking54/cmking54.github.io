@@ -4,6 +4,7 @@ var changes = {};
 
 function save_school_page() {
     saveToCookies(changes);
+    document.getElementById("demoPage").src=document.getElementById("demoPage").src;
 }
 
 function change_primary_color_html(choice) {
