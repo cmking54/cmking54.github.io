@@ -21,22 +21,6 @@ function getCookie(cname) {
   return "";
 }
 
-// function getCookie(name) {
-//   var name_pattern = new RegExp(name + "=(.*)");
-//   var decodedCookie = decodeURIComponent(document.cookie); // why needed?
-//   //console.log("Decoded: " + decodedCookie);
-//   var crumbs = decodedCookie.split(';');
-//   console.log(crumbs);
-//   for(var crumb in crumbs) {
-//     console.log(crumb);
-//     var result = crumb.match(name_pattern);
-//     console.log(result);
-//     if (result != null) {
-//       return result[0];
-//     }
-//   } return "";
-// }
-
 function saveToCookies(changes) {
   for (var change in changes) {
     makeCookie(change, changes[change]);

@@ -5,8 +5,9 @@
     <title></title>
   </head>
   <body>
-    <h1>Graduated</h1>
-    <h2>You focus on the end goal, we can manage the in-between</h2>
+    <h1 id="title">Graduated</h1>
+    <h2 id="subtitle">You focus on the end goal, we can manage the in-between</h2>
+    <img id="logo" src="" alt="" style="z-index:-1;position:absolute;top:21vh;left:35vw;align:center;" />
     <div style="text-align:center;border-style:solid;">
       <h3>Starting your Graduated Page</h3>
       <form id="homepage_schema">
@@ -18,23 +19,31 @@
         <br>
         <fieldset>
           <legend>Your Institute's Colors</legend>
-          <input type="text" name="school_color_1" placeholder="Maroon">
-          <input type="text" name="school_color_2" placeholder="White">
-          <br>
-          <input class="jscolor {onFineChange:'change_primary_color(this)'}"
-            name="school_color_custom_1"
-            value="#800000">
-          <input class="jscolor" name="school_color_custom_2">
+          <div class="display:block;">
+            <input type="text" name="school_color_1" placeholder="Maroon"
+            onchange="change_primary_color_html(this)">
+            <button class="jscolor {valueElement:null,onFineChange:'change_primary_color(this)'}"
+               name="school_color_custom_1"
+              value="#800000">Custom Picker</button>
+          </div>
+
+          <!-- <br> -->
+          <input type="text" name="school_color_2" placeholder="White"
+            onchange="change_secondary_color_html(this)">
+          <button class="jscolor {valueElement:null,onFineChange:'change_secondary_color(this)'}"
+          name="school_color_custom_2">Custom Picker</button>
         </fieldset>
         <br>
         <fieldset>
           <legend>Your Institute's Logo</legend>
-          <input type="file" name="school_logo" accept="image/jpeg, image/png">
+          <input type="file" name="school_logo" accept="image/jpeg, image/png"
+                  onchange="getLogo(this)">
         </fieldset>
 
         <br><br>
         <input type="button" value="Generate Home Page"
         onclick="save_school_page()">
+        <br>
       </form>
     </div>
     <a href="test_page.html">Try it out!</a>
@@ -42,5 +51,6 @@
   <script src="js/jscolor.js"></script>
   <script src=js/homepage_form.js></script>
   <script src="js/cookie.js" charset="utf-8"></script>
+  <script src="js/local_storage.js" charset="utf-8"></script>
   <style id="style_primary"></style>
 </html>

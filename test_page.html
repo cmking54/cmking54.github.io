@@ -5,14 +5,12 @@
     <title></title>
   </head>
   <body>
-    <h2>Test</h2>
     <a href="services/EduSuite/index.html">Dynamic Service Change</a>
+    <img id="logo" />
   </body>
   <script type="text/javascript">
     window.onload = function() {
-      console.log("Test");
       var primary_color = getCookie('primary_color');
-      console.log(primary_color);
       if (primary_color) { // "" is falsey; semantically is primary color is present
         document.body.style.backgroundColor = primary_color;
       }
@@ -28,7 +26,10 @@
         }
         target.innerText = title;
       }
+
+      document.getElementById('logo').src = getImage('logo');
     };
   </script>
   <script src="js/cookie.js" charset="utf-8"></script>
+  <script src="js/local_storage.js" charset="utf-8"></script>
 </html>
