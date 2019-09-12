@@ -22,9 +22,18 @@ function setColorScheme() {
 function generateColorScheme() {
   var schemes = [[]];
   var primary_color = getCookie('primary_color');
+  var secondary_color = getCookie('secondary_color');
   if (primary_color) { // "" is falsey; semantically is primary color is present
     schemes[0].push(primary_color);
+  } else {
+    schemes[0].push("#AEC7DC");
+  }
+  if (secondary_color) {
+    schemes[0].push(secondary_color);
+  } else {
     schemes[0].push("#5C88C7");
+  }
+  if (primary_color || secondary_color) {
     schemes[0].push("#0465B2");
   }
   schemes = (schemes[0].length == 0) ?
