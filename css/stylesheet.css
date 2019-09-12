@@ -1,0 +1,90 @@
+body{
+
+}
+header{
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+    font-style:italic;
+}
+
+footer{
+    color: white;
+    font-size: 10px;
+    background-color: grey;
+}
+
+frame {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    length: 400px;
+    flex: 1;
+    background: white;
+    padding: 20px;
+
+}
+
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+input[type=text],input[type=password] {   /* Example of grouping*/
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: black;
+  color: lightgreen;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+input[type=text]:focus{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+
+textarea{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: black;
+    color: lightgreen;
+}
+
+textarea:focus{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: White;
+    color: black;
+}
