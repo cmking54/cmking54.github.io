@@ -11,49 +11,60 @@
 </head>
 
 <body>
+    <div style="font-family: impact; color: white; background-color: black;">
+        <center>
+            <h1 id="title" style="font-size: 76px;">Graduated</h1>
+        </center>
+        <center>
+            <h2 id="subtitle">You focus on the end goal, we can manage the in-between</h2>
+        </center>
+    </div>
+    <div class="container">
+        <div class="row">
+            <img id="logo" src="" alt="" style="z-index:-1;position:absolute;top:21vh;left:35vw;align:center;" />
+            <div style="border-style:solid;" class="col-lg-6">
 
-<div style = "font-family: impact; color: white; background-color: black;">
-        <center><h1 id  = "title" style = "font-size: 76px;">Graduated</h1></center>
-        <center><h2 id="subtitle" >You focus on the end goal, we can manage the in-between</h2></center>
-</div>
+                <h3>Starting your Graduated Page</h3>
+                <form id="homepage_schema">
 
-    <img id="logo" src="" alt="" style="z-index:-1;position:absolute;top:21vh;left:35vw;align:center;" />
-    <div style="text-align:center;border-style:solid;">
+                    <fieldset>
+                        <legend>Your Institute Name</legend>
+                        <input type="text" name="school_name" placeholder="Colgate" onchange="changeTitle(this)">
+                    </fieldset>
+                    <br>
 
-        <h3>Starting your Graduated Page</h3>
-        <form id="homepage_schema">
+                    <fieldset>
+                        <legend>Your Institute's Colors</legend>
+                        <div class="display:block;">
+                            <input type="text" name="school_color_1" placeholder="Maroon" onchange="change_primary_color_html(this)">
+                            <button class="jscolor {valueElement:null,onFineChange:'change_primary_color(this)'}" name="school_color_custom_1" value="#800000">Custom Picker</button>
+                        </div>
 
-            <fieldset>
-                <legend>Your Institute Name</legend>
-                <input type="text" name="school_name" placeholder="Colgate" onchange="changeTitle(this)">
-            </fieldset>
-            <br>
+                        <!-- <br> -->
+                        <input type="text" name="school_color_2" placeholder="White" onchange="change_secondary_color_html(this)">
+                        <button class="jscolor {valueElement:null,onFineChange:'change_secondary_color(this)'}" name="school_color_custom_2">Custom Picker</button>
+                    </fieldset>
+                    <br>
 
-            <fieldset>
-                <legend>Your Institute's Colors</legend>
-                <div class="display:block;">
-                    <input type="text" name="school_color_1" placeholder="Maroon" onchange="change_primary_color_html(this)">
-                    <button class="jscolor {valueElement:null,onFineChange:'change_primary_color(this)'}" name="school_color_custom_1" value="#800000">Custom Picker</button>
-                </div>
+                    <fieldset>
+                        <legend>Your Institute's Logo</legend>
+                        <input type="file" name="school_logo" accept="image/jpeg, image/png" onchange="getLogo(this)">
+                    </fieldset>
+                    <br><br>
+                    <input type="button" value="Generate Home Page" onclick="save_school_page()">
+                    <br>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <iframe src="test_page.html" id="demoPage" width = "100%" height = "100%"></iframe>
+            </div>
 
-                <!-- <br> -->
-                <input type="text" name="school_color_2" placeholder="White" onchange="change_secondary_color_html(this)">
-                <button class="jscolor {valueElement:null,onFineChange:'change_secondary_color(this)'}" name="school_color_custom_2">Custom Picker</button>
-            </fieldset>
-            <br>
-
-            <fieldset>
-                <legend>Your Institute's Logo</legend>
-                <input type="file" name="school_logo" accept="image/jpeg, image/png" onchange="getLogo(this)">
-            </fieldset>
-            <br><br>
-            <input type="button" value="Generate Home Page" onclick="save_school_page()">
-            <br>
-        </form>
+        </div>
+    </div>
+    <div>
+        <button><a href="test_page.html">Try it out!</a> </button>
     </div>
 
-<div> <button><a href="test_page.html">Try it out!</a> </div></button>
-<iframe src="test_page.html" id = "demoPage"></iframe>
 
 </body>
 
