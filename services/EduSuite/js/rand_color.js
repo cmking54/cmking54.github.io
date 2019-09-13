@@ -6,9 +6,10 @@ function onPageLoad() {
 
 function setColorScheme() {
   var scheme = generateColorScheme();
+  // console.log(scheme);
   var style = document.createElement('style');
   style.innerHTML = `
-    body {
+    .color_back {
       background-color: ` + scheme[2] + `;
     }
     .color_primary {
@@ -34,15 +35,13 @@ function generateColorScheme() {
     schemes[0].push("#5C88C7");
   }
   if (primary_color || secondary_color) {
-    schemes[0].push("#0465B2");
+    schemes[0].push("#CFCFC4");
+    return schemes[0];
   }
-  schemes = (schemes[0].length == 0) ?
-              {0: ["#AEC7DC", "#5C88C7", "#0465B2"],
+  schemes = {0: ["#AEC7DC", "#5C88C7", "#0465B2"],
               1: ["#7C6BAF", "#B8B0D7", "#583091"],
-              2: ["#FC801C", "#F5A870", "#FED9C6"]}
-              : schemes;
-
-  //var arr = Object.keys(schemes);
+              2: ["#FC801C", "#F5A870", "#FED9C6"]};
+  var arr = Object.keys(schemes);
   //return schemes[0];
-  return schemes[Math.floor(Math.random() * schemes.length)];
+  return schemes[Math.floor(Math.random() * arr.length)];
 }
