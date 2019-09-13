@@ -15,7 +15,7 @@
     <link href="css/offcanvas.css" rel="stylesheet">
 </head>
 
-<body class="bg-light">
+<body class="bg-light" style = "color: black;">
 
     <div style="font-family: impact; color: white; background-color: black;">
         <center>
@@ -51,8 +51,6 @@
                         <a class="dropdown-item" href="services/EduSuite/index.html">Chris</a>
                         <a class="dropdown-item" href="services/COOP/index.html">Sai</a>
                         <a class="dropdown-item" href="#">Donelys</a>
-                        <a class="dropdown-item" href="#">abe</a>
-
                     </div>
                 </li>
             </ul>
@@ -68,7 +66,7 @@
             <img />
             <img class="mr-3" id="logo" alt="" width="48" height="48">
             <div class="lh-100">
-                <h6 class="mb-0 text-white lh-100"></h6>
+                <h6 class="mb-0" style = "color:black;" id = "school_name"> </h6>
                 <small>since 2019</small>
             </div>
         </div>
@@ -120,8 +118,9 @@
 
         var title = getCookie('title');
         if (title) {
-            var target = document.getElementById("title_student");
+            var target = document.getElementById("school_name");
             target.innerText = title;
+            console.log("wassup");
         }
 
         document.getElementById('logo').src = getImage('logo');
