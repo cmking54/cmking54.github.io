@@ -36,7 +36,7 @@ function change_secondary_color(choice) {
 }
 
 function changeTitle(choice) {
-    document.getElementsByTagName('h1')[0].innerText = choice.value;
+    // document.getElementsByTagName('h1')[0].innerText = choice.value;
     changes['title'] = choice.value;
 }
 

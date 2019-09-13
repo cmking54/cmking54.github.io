@@ -19,13 +19,13 @@
 
     <div style="font-family: impact; color: white; background-color: black;">
         <center>
-            <h1 id="title" style="font-size: 76px;">Gra<span>&#183;dua</span><span class = "rounded"style = "background-color: orange; color: black;">&#183;Ted</span> </h1>
+            <h1 id="title_student" style="font-size: 76px;"></span> </h1>
         </center>
         <center>
-            <h2 id="subtitle">You focus on the end goal, we can manage the in-between</h2>
+            <h2 id="subtitle_student"></h2>
         </center>
     </div>
-    
+
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
         <a class="navbar-brand" href="student_page.html">Welcome To Your Page</a>
         <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
@@ -105,6 +105,7 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 <script type="text/javascript">
     window.onload = function() {
         var primary_color = getCookie('primary_color');
@@ -112,16 +113,14 @@
             document.body.style.backgroundColor = primary_color;
         }
 
+        var secondary_color = getCookie('secondary_color');
+        if (secondary_color) { // "" is falsey; semantically is primary color is present
+            document.body.style.color = secondary_color;
+        }
+
         var title = getCookie('title');
         if (title) {
-            var targets = document.getElementsByTagName('h2'),
-                target;
-            if (targets.length) { // 0 is falsey; semantically is a target exists
-                target = targets[0];
-            } else {
-                target = document.createElement('h2');
-                document.body.appendChild(target);
-            }
+            var target = document.getElementById("title_student");
             target.innerText = title;
         }
 
