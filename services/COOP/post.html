@@ -23,8 +23,8 @@
 
             <div class="collapse navbar-collapse" id="myTogglerNav">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="index.html">Home</a>
-                    <a class="nav-item nav-link" href="post.html">Post a Project</a>
+                    <a class="nav-item nav-link" href="index.html">Home</a>
+                    <a class="nav-item nav-link active" href="post.html">Post a Project</a>
                     <a class="nav-item nav-link" href="current.html">Current Projects</a>
                     <a class="nav-item nav-link" href="friends.html">Friends</a>
                     <form class="form-inline">
@@ -34,42 +34,55 @@
                 </div> <!-- navbar -->
             </div> <!-- collapse -->
         </div> <!-- container -->
+
     </nav> <!-- nav -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-4">
+                <form action="requests.html" method="POST">
+                    <div class="form-group">
 
-    <form action="requests.html" method = "POST">
+                        <label for="firstname">First Name</label><br>
+                        <input type="text" name="firstname" id="firstname" value="John">
+                    </div>
 
-        <label for="firstname">First Name</label><br>
-        <input type="text" name="firstname" id="firstname" value="John">
-        <br> <br />
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label><br>
+                        <input type="text" name="lastname" id="lastname" value="Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectname">Project Name</label><br>
+                        <input type="text" name="projectname" id="projectname" value="Name_Project">
+                        <br>
+                    </div>
+                    <div class="form-checkbox">
+                        <label for="langs">Technology Filter</label><br>
+                        <div>
+                            <input type="checkbox" name="java" value="Bike"> Java<br>
+                            <input type="checkbox" name="c++" value="Car"> C++<br>
+                            <input type="checkbox" name="python" value="Boat"> Python<br>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="java" value="Bike"> C#<br>
+                            <input type="checkbox" name="c++" value="Car"> Angular<br>
+                            <input type="checkbox" name="python" value="Boat"> React<br>
+                        </div>
 
-        <label for="lastname">Last Name</label><br>
-        <input type="text" name="lastname" id="lastname" value="Doe">
-        <br> <br />
-
-        <label for="projectname">Project Name</label><br>
-        <input type="text" name="projectname" id="projectname" value="Name_Project">
-        <br>
-        <label for="langs">Technology Filter</label><br>
-        <div class="grid-container">
-            <div>
-                <input type="checkbox" name="java" value="Bike"> Java<br>
-                <input type="checkbox" name="c++" value="Car"> C++<br>
-                <input type="checkbox" name="python" value="Boat"> Python<br>
+                    </div>
             </div>
-            <div>
-                <input type="checkbox" name="java" value="Bike"> C#<br>
-                <input type="checkbox" name="c++" value="Car"> Angular<br>
-                <input type="checkbox" name="python" value="Boat"> React<br>
-            </div>
+                <div class="col-sm-6">
+                    <h4>Project Description</h4>
+                    <textarea name="projectdesc" rows="20" cols="40">Project Description</textarea>
+                    <br> <br />
+                    <input class="btn btn-success btn-lg" type="submit" name="submit">
+                </div>
         </div>
-        <h4>Project Description</h4>
-        <textarea name="projectdesc" rows="20" cols="40">Project Description</textarea>
-        <br> <br />
-        <input class="btn btn-success btn-lg" type="submit" name="submit">
+    </div>
+
     </form>
 </body>
 <script type="post.js"></script>
-<footer>
+<div style="background-color: grey;">
     <hr />
     <center>
         <p style="font-size: 10px;">
@@ -83,6 +96,6 @@
     <center>
         <p style="font-size: 10px;">420 S Dolphinville Rd, Pisdogaway, NJ 08858</p>
     </center>
-</footer>
+</div>
 
 </html>
