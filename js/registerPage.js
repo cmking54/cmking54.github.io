@@ -16,16 +16,22 @@ function getEmail(choice, source) {
 }
 function getPassword(choice, source) {
   var first_password = document.getElementById(source + '_pw').value;
+  // choice.classList.add("mx-2");
+  // choice.classList.add("my-2");
+  choice.style.borderWidth = "3px";
   if (first_password != choice.value) {
     //set border to red
-    choice.classList.add("border");
-    choice.classList.remove("border-success")
-    choice.classList.add("border-danger");
+    choice.style.borderColor = "red";
+    // choice.classList.add("border");
+    // choice.classList.remove("border-success");
+    // choice.classList.add("border-danger");
   } else {
     //set border to green
-    choice.classList.add("border");
-    choice.classList.remove("border-danger");
-    choice.classList.add("border-success");
+    choice.style.borderColor = "green";
+    // choice.classList.add("border");
+    // choice.classList.remove("border-danger");
+    // choice.classList.add("border-success");
     changes[source + '_pw'] = choice.value; // DO NOT DO THIS; SENSITIVE
   }
+  console.log(choice.classList);
 }
