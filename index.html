@@ -1,88 +1,62 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title> Graduated</title>
-</head>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body style = "background-color: grey;">
+    <title>Cover Template for Bootstrap</title>
 
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/"> -->
 
-    <div style="font-family: impact; color: white; background-color: black;">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <div class="d-flex justify-content-end">
-            <a href="register_page.html"><button class="btn btn-primary"> Sign Up </button></a>
-            <a href="sign_in.html"><button class="btn btn-warning"> Sign In </button></a>
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Cover</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
         </div>
+      </header>
 
-        <center>
-            <h1 id="title" style="font-size: 76px;">Gra<span>&#183;</span>dua<span>&#183;</span>ted</h1>
-        </center>
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Cover your page.</h1>
+        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="lead">
+          <a href="register_page.html" class="btn btn-lg btn-secondary">Sign In</a>
+        </p>
+      </main>
 
-        <center>
-            <h2 id="subtitle">You focus on the end goal <span>&#183;</span> we can manage the in-between</h2>
-        </center>
-
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
     </div>
 
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-<div class = "container">
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
-        <div class="row">
-
-            <img id="logo" src="" alt="" style="z-index:-1;position:absolute;top:21vh;left:35vw;align:center;" />
-
-            <div style="border-style:solid; background-color: yellow;" class="col-lg-5" width = "100%">
-
-                <h3>Starting your Graduated Page</h3>
-                <form id="homepage_schema">
-
-                    <fieldset>
-                        <legend>Your Institute Name</legend>
-                        <input type="text" name="school_name" placeholder="Colgate" onchange="changeTitle(this)">
-                    </fieldset>
-                    <br>
-
-                    <fieldset>
-                        <legend>Your Institute's Colors</legend>
-
-                        <div class="display:block;">
-                            <input type="text" name="school_color_1" placeholder="Maroon" onchange="change_primary_color_html(this)">
-                            <button class="jscolor {valueElement:null,onFineChange:'change_primary_color(this)'}" name="school_color_custom_1" value="#800000">Custom Picker</button>
-                        </div>
-
-                        <!-- <br> -->
-                        <input type="text" name="school_color_2" placeholder="White" onchange="change_secondary_color_html(this)">
-                        <button class="jscolor {valueElement:null,onFineChange:'change_secondary_color(this)'}" name="school_color_custom_2">Custom Picker</button>
-                    </fieldset>
-                    <br>
-
-                    <fieldset>
-                        <legend>Your Institute's Logo</legend>
-                        <input type="file" name="school_logo" accept="image/jpeg, image/png" onchange="getLogo(this)">
-                    </fieldset>
-                    <br><br>
-                    <input type="button" value="Generate Home Page" onclick="save_school_page()">
-                    <br>
-                </form>
-            </div> <!-- Inserting container -->
-            <div class="col-lg-1">
-
-            </div>
-
-            <div class="col-lg-5">
-                <iframe src="student_page.html" id="demoPage" width="100%" height="100%"></iframe>
-                <a href="student_page.html"><button>Checkout your page!</button></a>
-            </div>
-
-        </div> <!-- row -->
-    </div> <!-- container -->
-</body>
-
+  </body>
 </html>
