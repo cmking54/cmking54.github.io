@@ -52,6 +52,8 @@ function getLogo(choice) { // recieve file
     reader.readAsDataURL(choice.files[0]);
     saveImage(logo, 'logo');
 }
+
+
 const isColor = (strColor) => { // change to function notation?
     const s = new Option().style;
     s.color = strColor;
