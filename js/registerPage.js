@@ -19,11 +19,13 @@ function getPassword(choice, source) {
   if (first_password != choice.value) {
     //set border to red
     choice.classList.add("border");
+    choice.classList.remove("border-success")
     choice.classList.add("border-danger");
   } else {
     //set border to green
     choice.classList.add("border");
+    choice.classList.remove("border-danger");
     choice.classList.add("border-success");
-    changes[source + 'pw'] = choice.value; // DO NOT DO THIS; SENSITIVE
+    changes[source + '_pw'] = choice.value; // DO NOT DO THIS; SENSITIVE
   }
 }

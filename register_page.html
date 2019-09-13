@@ -57,21 +57,21 @@
             <div class="row register-form">
               <div class="col">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Profile Name" value="" />
+                  <input type="text" class="form-control" placeholder="Profile Name" value="" onchange="getProfileName(this, 'student')"/>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Institution Name" value="" />
+                  <input type="text" class="form-control" placeholder="Institution Name" value=""/>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Email" value="" />
+                  <input type="email" class="form-control" placeholder="Email" value="" onchange="getEmail(this, 'student')"/>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Password" value="" />
+                  <input id="student_pw" type="password" class="form-control" placeholder="Password" value="" />
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Confirm Password" value="" />
+                  <input id="student_pw_check" type="password" class="form-control" placeholder="Confirm Password" value="" />
                 </div>
-                <input type="button" class="btnRegister" value="Register" onclick="" />
+                <input type="button" class="btnRegister" value="Register" onclick="save_profile_page('student')" />
               </div>
             </div>
           </div>
