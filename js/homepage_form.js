@@ -41,7 +41,8 @@ function changeTitle(choice) {
 }
 
 function getLogo(choice) { // recieve file
-    var logo = document.getElementById('logo'); // get logo spot
+    // document.getElementById('logo');
+    var logo =  document.createElement("img");// get logo spot
     var reader = new FileReader();
     reader.onload = function(e) {
         // get loaded data and render thumbnail.
