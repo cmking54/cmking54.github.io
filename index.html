@@ -10,10 +10,12 @@
     <title> Graduated</title>
 </head>
 
-<body>
+<body style = "background-color: grey;">
 
-    <div style="font-family: impact; color: white; background-color: black;" >
-        <div class = "d-flex justify-content-end">
+
+    <div style="font-family: impact; color: white; background-color: black;">
+
+        <div class="d-flex justify-content-end">
             <a href="register_page.html"><button class="btn btn-primary"> Sign Up </button></a>
             <a href="sign_in.html"><button class="btn btn-warning"> Sign In </button></a>
         </div>
@@ -27,10 +29,16 @@
         </center>
 
     </div>
-    <div class="container">
+
+
+
+<div class = "container">
+
         <div class="row">
+
             <img id="logo" src="" alt="" style="z-index:-1;position:absolute;top:21vh;left:35vw;align:center;" />
-            <div style="border-style:solid;" class="col-lg-6">
+
+            <div style="border-style:solid; background-color: yellow;" class="col-lg-5" width = "100%">
 
                 <h3>Starting your Graduated Page</h3>
                 <form id="homepage_schema">
@@ -43,6 +51,7 @@
 
                     <fieldset>
                         <legend>Your Institute's Colors</legend>
+
                         <div class="display:block;">
                             <input type="text" name="school_color_1" placeholder="Maroon" onchange="change_primary_color_html(this)">
                             <button class="jscolor {valueElement:null,onFineChange:'change_primary_color(this)'}" name="school_color_custom_1" value="#800000">Custom Picker</button>
@@ -62,18 +71,18 @@
                     <input type="button" value="Generate Home Page" onclick="save_school_page()">
                     <br>
                 </form>
+            </div> <!-- Inserting container -->
+            <div class="col-lg-1">
+
             </div>
-            <div class="col-lg-6">
-                <iframe src="test_page.html" id="demoPage" width="100%" height="100%"></iframe>
+
+            <div class="col-lg-5">
+                <iframe src="student_page.html" id="demoPage" width="100%" height="100%"></iframe>
+                <a href="student_page.html"><button>Checkout your page!</button></a>
             </div>
 
-        </div>
-    </div>
-    <div>
-        <button><a href="test_page.html">Try it out!</a> </button>
-    </div>
-
-
+        </div> <!-- row -->
+    </div> <!-- container -->
 </body>
 
 </html>
